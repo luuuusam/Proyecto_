@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR - Reservas</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="icon" href="./imagenes/logo.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Resort</h1>
+        <p>¡Tu lugar de descanso perfecto!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="habitaciones.html">HABITACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="#">RESERVAS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <h2 class="titulo_Reserva">FORMULARIO DE RESERVAS</h2>
+
+         <div class="contenedor_Reserva"> 
+            
+            <form action="enviar_reserva.php" method="POST">
+                <label for="fecha-entrada">Fecha de entrada:</label>
+                <input type="date" id="fecha-entrada" name="fecha-entrada" required>
+
+                <label for="fecha-salida">Fecha de salida:</label>
+                <input type="date" id="fecha-salida" name="fecha-salida" required><br><br>
+
+                <label for="habitacion">Seleccione una habitación:</label>
+                <select id="habitacion" name="habitacion" required>
+                    <option value="">Seleccionar</option>
+                    <option value="individual">Estandar</option>
+                    <option value="doble">Triple</option>
+                    <option value="doble">Ejecutivas</option>
+                    <option value="suite">Suite</option>
+                </select><br><br>
+
+                <label for="personas">Cantidad de personas:</label>
+                <input type="number" id="personas" name="personas" min="1" max="5"><br><br>
+
+                <input type="submit" value="Consultar disponibilidad">
+            </form>
+        
+        </div>
+   
+
+    </main>
+
+    <footer>
+        <p>&copy;2023 Hotel Resort | Todos los derechos reservados. | <a href="">Politica de
+                privacidad.</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+</body>
+
+</html>
